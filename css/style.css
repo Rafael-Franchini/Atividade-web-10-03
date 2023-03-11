@@ -1,0 +1,58 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(230, 228, 226);
+}
+.H{
+    margin-top: 10px;
+    text-align:center;
+    color:rgb(84, 142, 175);
+}
+
+.form{
+    color: white;
+    background-color:rgb(84, 142, 175);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+}
+.form input{
+    width: 300px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+.form div {
+    display: flex;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form div input{
+    width: 50px;
+    height: 20px;
+}
+
+.form input[type="submit"]{
+    background-color: rgba(255, 255, 255, 0.678);
+    color: rgb(84, 142, 175);
+    width: 310px;
+    height: 30px;
+}
+.form input[type="submit"]:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.form .result{
+    width: 250px;
+    text-align: center;
+    display: flex;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="Author" content="Rafael Franchini 109179">
+    <meta name="description" content="Site feito como atividade de aula ">
+    <meta name="keywords" content="site,aula,web">
+    <title>Reserva de Quartos do Hotel PW</title>
+    <script>
+        function calc(){
+            var dias=document.getElementById("dias").value;
+            var conv=document.getElementById("conv").value;
+            var valor1=parseFloat(99.00);
+            var valor2=parseFloat(10.00);
+            var resultado=(parseFloat(dias)*valor1)+(parseFloat(conv)*valor2);
+            document.querySelector(".res").innerHTML="R$ "+resultado+",00";
+        }
+    </script>
+</head>
+<body>
+    <h1 class="H">Reserva de Quartos do Hotel PW</h1>
+    <div class="form">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" required><br>
+        <label for="email">Digite seu email:</label>
+        <input type="email" id="email" pattern=".+@globex\.com" size="30" required ><br>
+        <label for="data">Data de chegada:</label> 
+        <input type="date"  id="data" required><br>
+        <div>
+            <label for="dias">Numero de noites (cada noite custa R$99,00):</label>
+            <input  class="dias"  type="number" id="dias" min="1" max="30" value="1" onchange="calc()"><br>
+        </div>
+        <div>
+            <label for="conv">Numero de convidados(cada candidato adicional custa R$10,00 por noite):</label>
+            <input class="conv"  type="number" id="conv" min="1" max="10" value="0" onchange="calc()" ><br>
+        </div>
+        <div class="result" >
+            <p>Orçamento estimado:</p>
+            <p class="res"></p>
+        </div>
+        <br>
+        <label for="cod">Codigo promocional: </label>
+        <input type="text" id="cod" minlength="6" maxlength="6"pattern="[0-9A-Za-Z]"><br>
+        <input type="submit" value="Fazer Reserva"  >
+    </div>
+    
+</body>
+</html>
